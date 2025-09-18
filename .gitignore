@@ -1,0 +1,8 @@
+#忽略图片资源
+*.png
+*.jpg
+*.JPEG
+*.jpeg
+
+#字体图标
+iconfont/
