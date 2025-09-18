@@ -1,0 +1,34 @@
+/* 基础公共样式：清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+.shortcut {
+  width: 1920px;
+  height: 52px;
+  background-color: red;
+}
+
+.shortcut__icon {
+  margin: 0 auto;
+  background-color: azure;
+  height: 52px;
+  width: 1240px;
+}
