@@ -1,0 +1,514 @@
+.banner {
+  background-color: #F5F5F5;
+}
+
+
+.banner .wrapper {
+  background-image: url(../uploads/banner1.png);
+  height: 500px;
+  position: relative;
+
+}
+
+
+
+.banner .wrapper dl {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  background-color: #000;
+  opacity: 0.6;
+  align-items: center;
+  position: relative;
+}
+
+.banner .wrapper dl dt {
+  margin-right: 14px;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 29px;
+}
+
+.banner .wrapper dl dd {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.banner .wrapper dl .iconfont {
+  font-size: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+  color: #fff;
+}
+
+
+.banner .wrapper dl:hover {
+  opacity: 1;
+  background-color: #00BE9A;
+}
+
+.banner .wrapper .flag {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+  height: 22px;
+}
+
+.banner .wrapper .flag li {
+  padding-left: 4px;
+  padding-top: 2px;
+}
+
+.banner .wrapper .flag li span {
+  display: inline-block;
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  align-items: center;
+  margin-right: 16px;
+  align-items: center;
+}
+
+.banner .wrapper .flag li:last-child span {
+  margin-right: 0px;
+}
+
+.banner .wrapper .flag .active {
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.banner .wrapper .flag .active span {
+  background-color: #fff;
+}
+
+
+.subfield .wrapper .top {
+  display: flex;
+  align-items: baseline;
+
+  margin-top: 40px;
+}
+
+.subfield .wrapper .top h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-right: 35px;
+}
+
+.subfield .wrapper .top div {
+  font-size: 16px;
+  color: #A1A1A1;
+}
+
+.subfield .wrapper .top div:nth-child(2) {
+  margin-right: 865px;
+}
+
+.subfield .wrapper .top div:last-child {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+.subfield .wrapper ul {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+
+.subfield .wrapper ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.subfield .wrapper ul li img {
+  width: 304px;
+  height: 304px;
+}
+
+.subfield .wrapper ul li .bot div:first-child {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 17.5px;
+}
+
+.subfield .wrapper ul li .bot {
+  background-color: #EEF9F4;
+  width: 304px;
+  height: 100px;
+  text-align: center;
+}
+
+.subfield .wrapper ul li .bot div:nth-child(2) {
+  margin-top: 8.5px;
+  color: #AA2113;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.subfield .wrapper ul li .bot div:last-child {
+  margin-top: 8.5px;
+  color: #AA2113;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.hot {
+  background: #F5F5F5;
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.hot .wrapper {
+  position: relative;
+}
+
+.hot .wrapper .tit {
+  display: flex;
+  align-items: baseline;
+}
+
+.hot .wrapper .tit div:first-child {
+  font-size: 30px;
+  margin-right: 35px;
+}
+
+.hot .wrapper .tit div:last-child {
+  font-size: 16px;
+  color: #A1A1A1;
+}
+
+.hot .wrapper ul {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hot .wrapper .flag {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 50px;
+}
+
+.hot .wrapper .flag div {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(226, 226, 226);
+}
+
+.hot .wrapper .flag .iconfont {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  padding-left: 1px;
+}
+
+.hot .wrapper .flag div:first-child {
+  margin-right: 12px;
+}
+
+.hot .wrapper .flag .active {
+  background-color: rgb(0, 190, 154);
+}
+
+
+
+
+
+
+
+
+.fresh .wrapper .top {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.fresh .wrapper .top div:first-child {
+  font-size: 30px;
+  margin-right: 662px;
+}
+
+.fresh .wrapper .top ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 65px;
+}
+
+.fresh .wrapper .top ul li a {
+  display: block;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 0 7px;
+}
+
+.fresh .wrapper .top ul li:last-child {
+  margin-right: 0;
+}
+
+.fresh .wrapper .top div:nth-child(3) {
+  font-size: 16px;
+  color: #A1A1A1;
+  margin-right: 10px;
+}
+
+
+.fresh .wrapper .top .iconfont {
+  color: #A1A1A1;
+  font-size: 16px;
+}
+
+
+.fresh .wrapper .top ul .active {
+  background-color: #00BE9A;
+  color: #fff;
+}
+
+
+.fresh .wrapper .bot {
+  margin-top: 20px;
+  display: flex;
+}
+
+
+.fresh .wrapper .bot ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 24px;
+}
+
+.fresh .wrapper .bot ul li {
+  width: 242px;
+  height: 305px;
+  padding: 14px 26px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fresh .wrapper .bot ul li img {
+  width: 190px;
+  height: 171px;
+}
+
+.fresh .wrapper .bot ul li .tit1 {
+  margin-top: 10px;
+}
+
+.fresh .wrapper .bot ul li div:nth-child(5) {
+  margin-top: 7px;
+  color: #AF2F22;
+}
+
+.fresh .wrapper .bot ul li div:nth-child(5) div {
+  display: inline-block;
+  font-size: 22px;
+}
+
+.fresh .wrapper .bot ul li .cover {
+  position: absolute;
+  background-color: #00BE9A;
+  color: #fff;
+  font-size: 13px;
+  width: 242px;
+  height: 83px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  left: 0;
+  bottom: -100px;
+}
+
+.fresh .wrapper .bot ul li .cover div:last-child div {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.fresh .wrapper .bot ul li .cover .iconfont {
+  font-size: 13px;
+}
+
+.fresh .wrapper .bot ul li .cover .tit {
+  font-size: 16px;
+  padding-bottom: 3.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.11);
+  width: 120px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fresh .wrapper .bot ul .active {
+  border: 1px solid #00BE9A;
+}
+
+
+
+.fresh .wrapper .bot ul .active .cover {
+  transition: all 0.5s;
+  bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+.new .wrapper .top {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  color: #A1A1A1;
+}
+
+.new .wrapper .top div:first-child {
+  font-size: 30px;
+  color: #333333;
+  margin-right: 1034px;
+}
+
+.new .wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.new .wrapper li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 405px;
+  height: 288px;
+  background-image: url(../uploads/topic1.png);
+  position: relative;
+}
+
+
+.new .wrapper li:nth-child(2) a {
+  background-image: url(../uploads/topic2.png);
+}
+
+.new .wrapper li:nth-child(3) a {
+  background-image: url(../uploads/topic3.png);
+}
+
+
+.new .wrapper li a div {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-left: 15px;
+}
+
+.new .wrapper ul li a div:nth-child(2) {
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.new .wrapper li a .price {
+  height: 25px;
+  line-height: 25px;
+  position: absolute;
+  color: #AA2113;
+  background-color: #fff;
+  padding: 0 7px;
+  font-size: 14px;
+  bottom: 30px;
+  right: 15px;
+}
+
+
+.new .wrapper li a .price div {
+  line-height: 25px;
+  margin-left: 0px;
+  text-align: center;
+  color: #AA2113;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.new .wrapper li .bot {
+  width: 405px;
+  height: 67px;
+
+  margin: 0 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.new .wrapper ul li .bot .flag1 {
+  display: flex;
+}
+
+.new .wrapper ul li .bot .flag1 div {
+  font-size: 14px;
+  color: #666666;
+  line-height: 67px;
+}
+
+.new .wrapper ul li .bot .flag1 .iconfont {
+  font-size: 16px;
+  line-height: 67px;
+  color: #AA2113;
+  margin-left: 15px;
+}
+
+
+
+
+.new .wrapper ul li .bot .flag2 {
+  display: flex;
+}
+
+.new .wrapper ul li .bot .flag2 div {
+  font-size: 14px;
+  color: #666666;
+  line-height: 67px;
+}
+
+.new .wrapper ul li .bot .flag2 .iconfont {
+  font-size: 16px;
+  line-height: 67px;
+  color: #666666;
+  margin-left: 20px;
+}
+
+
+.new .wrapper ul li .bot .flag3 {
+  display: flex;
+}
+
+.new .wrapper ul li .bot .flag3 div {
+  font-size: 14px;
+  color: #666666;
+  line-height: 67px;
+}
+
+.new .wrapper ul li .bot .flag3 .iconfont {
+  font-size: 16px;
+  line-height: 67px;
+  color: #666666;
+  margin-left: 215px;
+}
