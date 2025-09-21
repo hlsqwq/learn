@@ -4,8 +4,9 @@
 *.JPEG
 *.jpeg
 *.svg
-
+*.json
 
 #×ÖÌוÍ¼±ך
 iconfont/
 bootstrap/
+node_modules/

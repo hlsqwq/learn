@@ -3,6 +3,10 @@
 *.jpg
 *.JPEG
 *.jpeg
+*.svg
+
 
 #×ÖÌוÍ¼±ך
 iconfont/
+bootstrap/
+node_modules/
