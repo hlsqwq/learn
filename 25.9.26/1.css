@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+
+
+body,
+html {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 100px auto;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  align-items: flex-end;
+
+  .box {
+    position: relative;
+    background-color: pink;
+    width: 80px;
+
+    .tit {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bot {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+  }
+
+
+}
