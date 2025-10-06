@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button>注册</button>
+  <script src="./1.js"></script>
+  <script>
+    // my_axios({
+    //   url: 'http://hmajax.itheima.net/api/city',
+    //   method: 'get',
+    //   params: {
+    //     pname: '辽宁省'
+    //   }
+    // }).then(({ list }) => {
+    //   console.log(list);
+    //   list.forEach(element => {
+    //     document.write(element)
+    //     document.write('<br>')
+    //   })
+    // }).catch(err => {
+    //   console.log(err);
+    // })
+
+    document.querySelector('button').addEventListener('click', function () {
+      my_axios({
+        url: 'http://hmajax.itheima.net/api/register',
+        method: 'post',
+        data: {
+          username: 'admin11111111',
+          password: '123456'
+        }
+      }).then(res => {
+        console.log(res);
+      })
+    })
+  </script>
+</body>
+
+</html>
