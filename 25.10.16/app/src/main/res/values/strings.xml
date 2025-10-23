@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="div">/</string>
+    <string name="mul">*</string>
+    <string name="c">C</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="plus">+</string>
+    <string name="sub">-</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="eq">=</string>
+    <string name="root">✓</string>
+    <string name="_1_x">1/x</string>
+    <string name="_0">0</string>
+    <string name="point">.</string>
+    <string name="calculator">calculator</string>
+
+    <string name="demo1_hint_text_0">请输入账号</string>
+    <string name="demo1_hint_text_1">请输入密码</string>
+    <string name="demo1_text_2">跳转</string>
+    <string name="demo1_text_3">empty</string>
+    <string name="demo2_text_0">成功跳转</string>
+    <string name="demo2_text_1">回去</string>
+    <string name="first">first</string>
+    <string name="longFirst">计算器</string>
+    <string name="squ">圆角矩形</string>
+    <string name="cycle">椭圆</string>
+
+
+</resources>

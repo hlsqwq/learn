@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutId="first"
+        android:shortcutLongLabel="@string/longFirst"
+        android:shortcutShortLabel="@string/first">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.myapplication.MainActivity"
+            android:targetPackage="com.example.myapplication" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
