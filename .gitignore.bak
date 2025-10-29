@@ -11,3 +11,5 @@ iconfont/
 bootstrap/
 node_modules/
 swiper/
+node_modules/
+gradle
