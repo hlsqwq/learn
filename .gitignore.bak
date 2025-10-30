@@ -13,9 +13,9 @@ node_modules/
 swiper/
 node_modules/
 *.iml
-gradle
+*.gradle
 /local.properties
-/idea
+.idea/
 .DS_Store
 /build
 /captures
@@ -24,3 +24,5 @@ gradle
 local.properties
 *.webp
 gradlew
+test/
+androidTest/
