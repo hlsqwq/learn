@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/inputnumber.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>购物车</title>
+</head>
+
+<body>
+  <div class="app-container" id="app">
+    <!-- 顶部banner -->
+    <div class="banner-box"><img src="http://autumnfish.cn/static/fruit.jpg" alt="" /></div>
+    <!-- 面包屑 -->
+    <div class="breadcrumb">
+      <span>🏠</span>
+      /
+      <span>购物车</span>
+    </div>
+    <!-- 购物车主体 -->
+    <div class="main" v-if="fruitList.length > 0">
+      <div class="table">
+        <!-- 头部 -->
+        <div class="thead">
+          <div class="tr">
+            <div class="th">选中</div>
+            <div class="th th-pic">图片</div>
+            <div class="th">单价</div>
+            <div class="th num-th">个数</div>
+            <div class="th">小计</div>
+            <div class="th">操作</div>
+          </div>
+        </div>
+        <!-- 身体 -->
+        <div class="tbody">
+          <div class="tr" :class="{active:item.isChecked}" v-for="(item, index) in fruitList" :key="item.id">
+            <div class="td"><input type="checkbox" :checked="item.isChecked" /></div>
+            <div class="td"><img :src="item.icon" alt="" /></div>
+            <div class="td">{{item.price}}</div>
+            <div class="td">
+              <div class="my-input-number">
+                <button class="decrease" :disabled="item.num<1" @click="item.num--"> - </button>
+                <span class="my-input__inner">{{item.num}}</span>
+                <button class="increase" @click="item.num++" :disabled="item.num>5"> + </button>
+              </div>
+            </div>
+            <div class="td">{{item.num*item.price}}</div>
+            <div class="td"><button @click="del(item.id)">删除</button></div>
+          </div>
+
+        </div>
+      </div>
+      <!-- 底部 -->
+      <div class="bottom">
+        <!-- 全选 -->
+        <label class="check-all">
+          <input type="checkbox" v-model=is_all />
+          全选
+        </label>
+        <div class="right-box">
+          <!-- 所有商品总价 -->
+          <span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">{{sum_price}}</span></span>
+          <!-- 结算按钮 -->
+          <button class="pay">结算( {{sum_num}} )</button>
+        </div>
+      </div>
+    </div>
+    <!-- 空车 -->
+    <div class="empty" v-else>🛒空空如也</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+
+
+    function get() {
+      this.fruitList = JSON.parse(localStorage.getItem("list")) || []
+    }
+    get()
+    function set() {
+      localStorage.setItem("list", JSON.stringify(this.fruitList))
+    }
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        // 水果列表
+        fruitList: this.fruitList = JSON.parse(localStorage.getItem("list")) || []
+
+      },
+      methods: {
+        del(id) {
+          this.fruitList = this.fruitList.filter(v => v.id !== id)
+        },
+
+
+      },
+      watch: {
+        fruitList() {
+          localStorage.setItem("list", JSON.stringify(this.fruitList))
+        }
+      },
+      computed: {
+        sum_num() {
+          return this.fruitList.reduce((s, v) => {
+            if (v.isChecked) {
+              s++;
+            }
+            return s
+          }, 0)
+        },
+        sum_price() {
+          return this.fruitList.reduce((total, item) => {
+            if (item.isChecked) {
+              total += item.num * item.price;
+            }
+            return total;
+          }, 0);
+        },
+        sum() {
+          let total = 0;
+          this.fruitList.forEach(item => {
+            if (item.isChecked) {
+              total += item.num;
+            }
+          });
+          return total;
+        },
+        is_all: {
+          get() {
+            return this.fruitList.every(item => item.isChecked);
+          },
+          set(value) {
+            this.fruitList.forEach(item => {
+              item.isChecked = value;
+            })
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
