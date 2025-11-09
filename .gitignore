@@ -5,7 +5,11 @@
 *.jpeg
 *.svg
 *.json
+*.ico
 
+axios.js
+echarts.min.js
+vue.js
 #×ÖÌוÍ¼±ך
 iconfont/
 bootstrap/
