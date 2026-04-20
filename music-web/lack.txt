@@ -1,0 +1,88 @@
+# 缺少的 API 接口
+
+## 已实现的接口
+
+以下接口已在 `src/services/api.js` 中实现：
+
+### 1. 认证相关 API ✅
+- `/auth/login` - 用户登录
+- `/auth/oauth2/jwks` - 获取 JWKS
+- `/auth/user/list` - 获取用户列表
+
+### 2. 内容管理 API ✅
+- `/content/song/page/{id}` - 获取歌曲分页
+- `/content/song/update` - 更新歌曲
+- `/content/song-list/detail/{songListId}` - 获取歌单详情
+- `/content/song-list/add` - 添加歌单
+- `/content/song-list/update` - 更新歌单
+- `/content/song-list/delete/{songListId}` - 删除歌单
+- `/content/singer/{id}` - 获取歌手详情
+- `/content/singer/top10` - 获取热门歌手
+- `/content/singer/add` - 添加歌手
+- `/content/singer/update` - 更新歌手
+- `/content/singer/{id}` (DELETE) - 删除歌手
+- `/content/mv/list` - 获取 MV 列表
+- `/content/mv/detail/{mvId}` - 获取 MV 详情
+- `/content/mv/page/{id}` - 获取 MV 分页
+- `/content/mv/add` - 添加 MV
+- `/content/mv/update` - 更新 MV
+- `/content/mv/delete/{mvId}` - 删除 MV
+- `/content/album/detail/{albumId}` - 获取专辑详情
+- `/content/album/page/{id}` - 获取专辑分页
+- `/content/album/add` - 添加专辑
+- `/content/album/update` - 更新专辑
+- `/content/album/delete/{albumId}` - 删除专辑
+- `/content/category/list` - 获取分类列表
+- `/content/category/add` - 添加分类
+- `/content/category/update` - 更新分类
+- `/content/category/delete` - 删除分类
+- `/content/song-song-list/song-ids/{songListId}` - 获取歌单歌曲 ID 列表
+- `/content/song-song-list/add` - 添加歌曲到歌单
+- `/content/song-song-list/batch-add` - 批量添加歌曲到歌单
+- `/content/song-song-list/remove` - 从歌单移除歌曲
+- `/content/song-song-list/batch-remove` - 批量从歌单移除歌曲
+
+### 3. 媒体管理 API ✅
+- `/media/merge` - 合并文件
+- `/media/check/file` - 检查文件
+- `/media/check/chunk` - 检查分片
+- `/media/user-media/del/{id}` - 删除用户媒体
+- `/media/user-media/page` - 获取用户媒体分页
+
+### 4. 搜索相关 API ✅
+- `/search/search/{type}` - 按类型搜索
+- `/search/search/all` - 全局搜索
+
+### 5. 短信服务 API ✅
+- `/sms/captcha/validate` - 验证验证码
+- `/sms/captcha/create` - 创建验证码
+
+## 目前缺少的 API
+
+经过对比 interface.txt 和现有实现，所有接口都已实现，没有缺失的 API。
+
+## 建议补充的 API（可选）
+
+以下 API 在 interface.txt 中未明确定义，但可能需要：
+
+### 1. 播放历史相关
+- `/content/user/history/add` - 记录播放历史
+- `/content/user/history` - 获取播放历史
+
+### 2. 推荐系统相关
+- `/content/recommendation/songs` - 获取推荐歌曲
+- `/content/recommendation/song-lists` - 获取推荐歌单
+
+### 3. 用户收藏相关
+- `/auth/user/favorite` - 获取用户收藏
+- `/auth/user/favorite/add` - 添加收藏
+- `/auth/user/favorite/remove` - 移除收藏
+
+### 4. 评论相关
+- `/content/comment/list` - 获取评论列表
+- `/content/comment/add` - 添加评论
+- `/content/comment/delete` - 删除评论
+
+### 5. 播放列表相关
+- `/content/playlist/current` - 获取当前播放列表
+- `/content/playlist/update` - 更新播放列表

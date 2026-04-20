@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- 手柄式摇杆轮盘View（宽高一致，保证圆形） -->
+        <com.hls.component.HandleJoystickView
+            android:id="@+id/handleJoystickView"
+            android:layout_width="280dp"
+            android:layout_height="280dp" />
+
+        <!-- 显示当前摇杆方向 -->
+        <TextView
+            android:id="@+id/tvJoystickDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="当前方向：停止"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>

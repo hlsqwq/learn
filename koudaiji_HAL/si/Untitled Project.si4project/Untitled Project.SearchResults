@@ -1,0 +1,6 @@
+---- TOUCH_KEY_A Matches (5 in 4 files) ----
+Logic_Touch_Key in logic.c (C:\code\vscode\daily_code\koudaiji_HAL\StateMachine\src) :             case TOUCH_KEY_A:  //按键A切换检测的颜色
+Logic_System_Check in logic.c (C:\code\vscode\daily_code\koudaiji_HAL\StateMachine\src) :         case TOUCH_KEY_A:
+main in main.c (C:\code\vscode\daily_code\koudaiji_HAL\Core\Src) : 	if(Touch_Key_Value == TOUCH_KEY_A){
+Touch_Key_Scan in touch_key.c (C:\code\vscode\daily_code\koudaiji_HAL\HardWare\src) :                     Touch_Key_Value = TOUCH_KEY_A;
+touch_key.h (C:\code\vscode\daily_code\koudaiji_HAL\HardWare\inc) line 13 :     TOUCH_KEY_A,

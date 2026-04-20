@@ -6,8 +6,6 @@ import android.content.Context;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,10 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.stream.Collectors;
 
 import cn.wch.uartlib.WCHUARTManager;
 import cn.wch.uartlib.callback.IDataCallback;
@@ -46,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private List<UsbDevice> usbDevices;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,13 +55,57 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         button.setOnClickListener(this);
         spinner = findViewById(R.id.list);
         spinner.setVisibility(Spinner.VISIBLE);
+
         instance = getInstance();
         instance.setDebug(true);
         instance.init(this.getApplication());
 
         findViewById(R.id.search).setOnClickListener(this);
 
+
+        run();
+
     }
+
+
+    public void run(){
+        JoystickView joystick = findViewById(R.id.joystick);
+        joystick.setOnDirectionChangedListener(new JoystickView.OnDirectionChangedListener() {
+            @Override
+            public void onDirectionChanged(JoystickView.Direction direction) {
+                switch (direction) {
+                    case UP:
+                        // 处理向上命令
+                        write("w".getBytes());
+                        break;
+                    case DOWN:
+                        // 处理向下命令
+                        write("x".getBytes());
+                        break;
+                    case LEFT:
+                        // 处理向左命令
+                        write("a".getBytes());
+                        break;
+                    case RIGHT:
+                        // 处理向右命令
+                        write("d".getBytes());
+                        break;
+                    case CENTER:
+                        // 处理中心位置（可以视为停止或中立状态）
+                        write("s".getBytes());
+                        break;
+                }
+            }
+
+            @Override
+            public void onStop() {
+                write("s".getBytes());
+                // 处理停止命令（当手指离开轮盘时）
+            }
+        });
+    }
+
+
 
     @Override
     protected void onDestroy() {
@@ -86,10 +127,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     /**
-     * @param num  串口号
      * @param data
      */
-    public void write(int num, byte[] data) {
+    public void write(byte[] data) {
         if(!instance.isConnected(usbDevice)){
             return;
         }
@@ -145,7 +185,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if(serialCount<0){
                 return;
             }
-            if (instance.setSerialParameter(usbDevice, serialCount, 9600, 8, 1, 0, false)) {
+
+            if (instance.setSerialParameter(usbDevice, serialCount, 115200, 8, 1, 0, false)) {
                 Log.i("hls","配置成功");
             } else {
                 Log.i("hls","配置失败");
@@ -225,7 +266,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (usbDevices == null || usbDevices.isEmpty()) {
                 return;
             }
-            List<String> collect = usbDevices.stream().map(UsbDevice::getDeviceName).collect(Collectors.toList());
+//            List<String> collect = usbDevices.stream().map(UsbDevice::getDeviceName).collect(Collectors.toList());
+            List<String>collect=new ArrayList<>();
+            for (int i = 0; i < usbDevices.size(); i++) {
+                collect.add(usbDevices.get(i).getDeviceName());
+            }
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item_text, collect);
             spinner.setAdapter(adapter);
             spinner.setSelection(0);
@@ -236,8 +281,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             });
 
         } else if (v.getId() == R.id.sent) {
-            byte[] bytes = editText.getText().toString().trim().getBytes();
-            write(num, bytes);
+            write(editText.getText().toString().trim().getBytes());
         }
     }
 }

@@ -1,0 +1,50 @@
+
+
+添加歌手时需要请求
+### 获取分类
+
+请求地址
+
+```
+/content/category/list
+```
+
+请求参数
+
+```
+无
+```
+
+响应参数
+
+```
+{
+  "code": 200,
+  "msg": "ok",
+  "data": [
+    {
+      "id": 2,
+      "path": "2/",
+      "content": "地区",
+      "children": [
+        {
+          "id": 3,
+          "path": "2/3/",
+          "content": "日本",
+          "children": null
+        }
+      ]
+    }
+  ]
+}
+```
+来获取分类信息，并作为请求参数上传，所属分类显示list
+ id+/=path    表示一级分类，名称是content，显示content不要id，提交表单才是id
+
+
+歌手头像需要请求   /media/check/file   判断文件类型不可以是video，audio
+
+
+
+
+

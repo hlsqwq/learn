@@ -6,6 +6,9 @@
 *.svg
 *.json
 *.ico
+*.pt
+*.onnx
+
 
 axios.js
 echarts.min.js
